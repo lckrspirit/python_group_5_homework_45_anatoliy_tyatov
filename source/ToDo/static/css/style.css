@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #444444;
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
+    border: solid 2px aquamarine;
+    border-radius: 15px;
+}
+
+.div-selections {
+    display: block;
+    float: left;
+    margin-left: 25px;
+    margin-top: 20px;
+}
