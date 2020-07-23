@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from ToDo.models import Article, STATUS_CHOICES
 
 
@@ -12,7 +12,6 @@ def tasks(request):
         status = request.POST.get('status')
         date = request.POST.get('date')
         article = Article.objects.create(title=title, status=status, date_perform=date)
-        print(article)
-        return index_view(request)
+        return redirect('/')
     elif request.method == "GET":
         return render(request, 'new_tasks.html', context={'status_choices': STATUS_CHOICES})
